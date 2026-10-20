@@ -8,6 +8,11 @@
   home.packages = with pkgs; [
     curl
     zsh
+
+    # Neovim
+    neovim
+    ripgrep fd gcc
+    nixd nixfmt
   ];
 
   home.username = "ahmad";
@@ -20,6 +25,9 @@
     name = "Ahmad Gazali";
     email = "ahga.pr.xyz@gmail.com";
   };
+
+  home.sessionVariables.EDITOR = "nvim";
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/ahmad/nix-config/home/ahmad/nvim";
 
 }
 

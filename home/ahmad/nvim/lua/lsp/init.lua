@@ -1,0 +1,18 @@
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('pyright')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('clangd')
+vim.lsp.enable('verible')
+vim.lsp.enable('asm_lsp')
+vim.lsp.enable('jdtls')
+vim.lsp.enable('terraformls')
+vim.lsp.enable('sqls')
+
+-- Web dev
+vim.lsp.enable('ruby_lsp')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('eslint')
+vim.lsp.enable('tailwindcss')
+vim.lsp.enable('emmet_language_server')
+vim.lsp.enable('html')
+vim.lsp.enable('cssls')
