@@ -11,8 +11,11 @@
 
     # Neovim
     neovim
-    ripgrep fd gcc
-    nixd nixfmt
+    ripgrep
+    fd
+    gcc
+    nixd
+    nixfmt
   ];
 
   home.username = "ahmad";
@@ -27,7 +30,7 @@
   };
 
   home.sessionVariables.EDITOR = "nvim";
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/ahmad/nix-config/home/ahmad/nvim";
+  xdg.configFile."nvim".source =
+    config.lib.file.mkOutOfStoreSymlink "/home/ahmad/nix-config/home/ahmad/nvim";
 
 }
-

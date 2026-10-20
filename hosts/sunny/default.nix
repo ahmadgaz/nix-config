@@ -2,7 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    # ./disko.nix
+    ./disko.nix
     ../../modules/nixos/common.nix
     ../../modules/nixos/client.nix
     ../../modules/nixos/users/ahmad.nix
@@ -15,9 +15,17 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # BTRFS mount options
-  fileSystems."/".options = [ "compress=zstd" "noatime" ];
-  fileSystems."/home".options = [ "compress=zstd" "noatime" ];
-  fileSystems."/nix".options = [ "compress=zstd" "noatime" ];
+  fileSystems."/".options = [
+    "compress=zstd"
+    "noatime"
+  ];
+  fileSystems."/home".options = [
+    "compress=zstd"
+    "noatime"
+  ];
+  fileSystems."/nix".options = [
+    "compress=zstd"
+    "noatime"
+  ];
 
 }
-

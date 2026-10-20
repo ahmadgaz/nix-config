@@ -16,4 +16,3 @@
   # programs.firefox.enable = true;
 
 }
-
