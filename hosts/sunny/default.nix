@@ -14,18 +14,4 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # BTRFS mount options
-  fileSystems."/".options = [
-    "compress=zstd"
-    "noatime"
-  ];
-  fileSystems."/home".options = [
-    "compress=zstd"
-    "noatime"
-  ];
-  fileSystems."/nix".options = [
-    "compress=zstd"
-    "noatime"
-  ];
-
 }
