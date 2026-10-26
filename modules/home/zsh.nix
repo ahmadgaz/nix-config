@@ -2,6 +2,7 @@
 {
   programs.zsh = {
     enable = true;
+    enableCompletion = true; # Run user-level completions
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     shellAliases = {

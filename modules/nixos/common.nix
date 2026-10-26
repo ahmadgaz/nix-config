@@ -1,15 +1,21 @@
 { pkgs, ... }:
 {
+  # Packages
   environment.systemPackages = with pkgs; [
-    vim
     wget
-    git
   ];
 
+  programs.git.enable = true;
+
+  programs.vim.enable = true;
+
+  services.openssh.enable = true;
+
+  services.fwupd.enable = true;
+
+  # System configuration
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
-  services.openssh.enable = true;
-  services.fwupd.enable = true;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"

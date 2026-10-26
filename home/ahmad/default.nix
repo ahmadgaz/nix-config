@@ -2,32 +2,39 @@
 {
   imports = [
     ../../modules/home/git.nix
-    ../../modules/home/shell.nix
+    ../../modules/home/zsh.nix
   ];
 
+  # Packages
   home.packages = with pkgs; [
     curl
-    zsh
 
     # Neovim
     neovim
-    ripgrep
-    fd
-    gcc
     nixd
     nixfmt
   ];
 
-  home.username = "ahmad";
-  home.homeDirectory = "/home/ahmad";
-  home.stateVersion = "26.05";
-
   programs.home-manager.enable = true;
 
+  programs.git.enable = true;
   programs.git.settings.user = {
     name = "Ahmad Gazali";
     email = "ahga.pr.xyz@gmail.com";
   };
+
+  programs.zsh.enable = true;
+  
+  programs.ripgrep.enable = true;
+
+  programs.fd.enable = true;
+
+  programs.gcc.enable = true;
+
+  # Home configuration
+  home.username = "ahmad";
+  home.homeDirectory = "/home/ahmad";
+  home.stateVersion = "26.05";
 
   home.sessionVariables.EDITOR = "nvim";
   xdg.configFile."nvim".source =
