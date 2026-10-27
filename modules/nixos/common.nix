@@ -13,6 +13,9 @@
 
   services.fwupd.enable = true;
 
+  programs.zsh.enable = true;
+  programs.zsh.enableGlobalCompInit = false; # Let user-level completions run instead
+
   # System configuration
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
