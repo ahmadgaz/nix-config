@@ -2,6 +2,7 @@
 {
   imports = [
     ../../modules/home/git.nix
+    ../../modules/home/hyprland.nix
     ../../modules/home/zsh.nix
   ];
 
@@ -15,16 +16,13 @@
     nixfmt
   ];
 
-  programs.home-manager.enable = true;
-
-  programs.git.enable = true;
   programs.git.settings.user = {
     name = "Ahmad Gazali";
     email = "ahga.pr.xyz@gmail.com";
   };
 
-  programs.zsh.enable = true;
-  
+  programs.home-manager.enable = true;
+
   programs.ripgrep.enable = true;
 
   programs.fd.enable = true;
