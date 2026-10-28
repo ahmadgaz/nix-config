@@ -2,8 +2,7 @@
 {
   imports = [
     ../../modules/home/git.nix
-    ../../modules/home/hyprland.nix
-    ../../modules/home/noctalia.nix
+    ../../modules/home/niri.nix
     ../../modules/home/zsh.nix
   ];
 

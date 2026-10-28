@@ -7,8 +7,10 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  programs.hyprland.enable = true;
-  programs.hyprland.withUWSM = true;
+  # programs.hyprland.enable = true;
+  # programs.hyprland.withUWSM = true;
+
+  programs.niri.enable = true;
 
   programs.firefox.enable = true;
 

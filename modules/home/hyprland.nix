@@ -51,17 +51,40 @@ in
     package = null;
     portalPackage = null;
 
+    settings.monitor = {
+      _args = [
+        {
+          output = "";
+          mode = "preferred";
+          position = "auto";
+          scale = 1;
+        }
+      ];
+    };
+
+    settings.window_rule = {
+      _args = [
+        {
+          name = "suppress-maximize-events";
+          match.class = ".*";
+          suppress_event = "maximize";
+        }
+      ];
+    };
+
     settings.bind = [
       (bind "SUPER + RETURN" ''hl.dsp.exec_cmd("kitty")'')
       (bind "SUPER + D" ''hl.dsp.exec_cmd("fuzzel")'')
       (bind "SUPER + Q" "hl.dsp.window.close()")
+      (bind "SUPER + F" ''hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })'')
       (bind "SUPER + SHIFT + E" ''hl.dsp.exec_cmd("uwsm stop")'')
-      
+
       # Change focus with arrow keys
       (bind "SUPER + left" ''hl.dsp.focus({ direction = "left" })'')
       (bind "SUPER + right" ''hl.dsp.focus({ direction = "right" })'')
       (bind "SUPER + up" ''hl.dsp.focus({ direction = "up" })'')
       (bind "SUPER + down" ''hl.dsp.focus({ direction = "down" })'')
-    ] ++ workspaceBinds;
+    ]
+    ++ workspaceBinds;
   };
 }
